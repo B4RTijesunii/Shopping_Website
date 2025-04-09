@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +38,31 @@
         <img src="Images/b4r_logo.png" alt="B4R Shop Logo" class="logo" />
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
+
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Shop
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="shoes.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="#">Bags</a></li>
+              <li><a class="dropdown-item" href="#">Jewelries</a></li>
+              <li><a class="dropdown-item" href="#">Belts</a></li>
+              <li><a class="dropdown-item" href="#">Female wears</a></li>
+              <li><a class="dropdown-item" href="#">Male wears</a></li>
+              <li><a class="dropdown-item" href="#">Books</a></li>
+              <li><a class="dropdown-item" href="#">Household items</a></li>
+              <li><a class="dropdown-item" href="#">Groceries</a></li>
+              <li><a class="dropdown-item" href="#">Electronics</a></li>
+              <li><a class="dropdown-item" href="#">Cosmetics</a></li>
+              <li><a class="dropdown-item" href="#">Foodstuffs</a></li>
+            </ul>
+          </div>
           <li><a href="#">Cart</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -30,7 +70,8 @@
 
       <div class="hero">
         <div class="text-box">
-          <h1 class="h1">B4R SHOPPING MALL</h1>
+          <h1>B4R SHOPPING MALLs</h1>
+          <button class="homepage">Shop Here Now</button>
         </div>
       </div>
     </div>

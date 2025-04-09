@@ -25,7 +25,7 @@ body {
   font-size: 48px;
   font-weight: bold;
   margin: 20px;
-  padding: 20px;
+  padding-top: 250px;
   text-align: center;
 }
 ul {
@@ -46,4 +46,19 @@ a:hover {
 li {
   list-style: none;
   justify-content: end;
+}
+.homepage {
+  background-color: coral;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin: 20px;
+  margin-left: 500px;
+  justify-content: center;
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+}
+.dropdown {
+  margin-top: -8px;
 }
