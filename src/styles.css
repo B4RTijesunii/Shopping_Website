@@ -78,5 +78,9 @@ li {
 .dropdown {
   margin-top: -8px;
 }
-.lady-shoes {
+.catalogue {
+  display: flex;
+}
+.shoe-title {
+  background-color: #ebe6e0;
 }
