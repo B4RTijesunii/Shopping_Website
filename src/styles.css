@@ -1,4 +1,4 @@
-body {
+body p {
   font-family: "Poppins", sans-serif;
 }
 .navigation img {
@@ -13,20 +13,30 @@ body {
 .hero {
   height: 90vh;
   width: 100%;
+  position: relative;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url(/Images/shopping\ mall2.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.text-box {
+  color: white;
+  max-width: 600px;
 }
 .text-box h1 {
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: bold;
-  margin: 20px;
-  padding-top: 250px;
+  margin-bottom: 20px;
+
   text-align: center;
+  max-width: 600px;
 }
 ul {
   display: flex;
@@ -43,22 +53,30 @@ a:hover {
   color: red;
   font-size: 20px;
 }
+.homepage-p {
+  color: burlywood;
+  text-align: center;
+}
 li {
   list-style: none;
   justify-content: end;
 }
-.homepage {
-  background-color: coral;
+.homepage-button {
+  background-color: #2a9d8f;
   color: white;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid white;
-  margin: 20px;
-  margin-left: 500px;
-  justify-content: center;
-  margin-top: 100px;
-  font-family: "Poppins", sans-serif;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.homepage-button:hover {
+  background-color: #21867d;
 }
 .dropdown {
   margin-top: -8px;
+}
+.lady-shoes {
 }
