@@ -49,9 +49,23 @@ a {
   justify-content: right;
   border: black;
 }
+.shop-dropdown {
+  padding-top: 15px;
+}
+.clicktoseemore {
+  color: black;
+}
+.clicktoseemore {
+  color: black;
+}
 a:hover {
+  color: #d3a062;
+}
+a:active {
   color: red;
-  font-size: 20px;
+}
+.nav-link:hover {
+  color: #d3a062;
 }
 .homepage-p {
   color: burlywood;
@@ -72,6 +86,9 @@ li {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+.shoppp {
+  margin-bottom: -10px;
+}
 .homepage-button:hover {
   background-color: #21867d;
 }
@@ -83,4 +100,7 @@ li {
 }
 .shoe-title {
   background-color: #ebe6e0;
+}
+.shoeforlady:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
