@@ -1,6 +1,9 @@
 body p {
   font-family: "Poppins", sans-serif;
 }
+body {
+  font-family: "Poppins", sans-serif;
+}
 .navigation img {
   width: 70px;
   background-color: black;
@@ -101,6 +104,14 @@ li {
 .shoe-title {
   background-color: #ebe6e0;
 }
+.shoeforlady {
+}
 .shoeforlady:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-img-top {
+  height: 250px; /* you can adjust this to 200px, 300px depending on your design */
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px; /* optional, to make it look softer */
 }
