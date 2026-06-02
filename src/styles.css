@@ -225,3 +225,30 @@ body p {
   margin: 0;
   letter-spacing: 0; /* was 0.03em */
 }
+
+/* FEATURES SECTION */
+.features-section {
+  background: #1a1a2e;
+  padding: 50px 0;
+}
+.feature-item {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.feature-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.feature-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
