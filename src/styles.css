@@ -131,7 +131,6 @@ body p {
 .shoe-title {
   background-color: #ebe6e0;
 }
-
 .catalogue {
   display: flex;
 }
@@ -228,7 +227,7 @@ body p {
 
 /* FEATURES SECTION */
 .features-section {
-  background: #1a1a2e;
+  background: #2a9d8f;
   padding: 50px 0;
 }
 .feature-item {
@@ -249,6 +248,114 @@ body p {
 
 .feature-text {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+/* ── Footer ────────────────────────────────── */
+.footer {
+  background: #111122;
+  padding: 50px 0 24px;
+}
+
+.footer-logo {
+  margin-bottom: 14px;
+  display: block;
+}
+
+.footer-about {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+
+.footer-heading {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footer-link {
+  display: block;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #2a9d8f;
+}
+
+.footer-newsletter-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 12px;
+}
+
+.footer-input {
+  background: #1e1e35;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 13px;
+  border-radius: 6px 0 0 6px;
+}
+
+.footer-input:focus {
+  background: #1e1e35;
+  color: white;
+  border-color: #2a9d8f;
+  box-shadow: none;
+}
+
+.footer-subscribe-btn {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.footer-subscribe-btn:hover {
+  background: #21867d;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 32px 0 16px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+.shoe-title {
+  background-color: #f5f1eb;
+}
+.page-header {
+  background: #f8f8f6;
+  padding: 40px 20px 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 15px;
+  color: #888;
   margin: 0;
 }

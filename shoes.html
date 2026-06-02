@@ -3,33 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts: preconnect first -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lora&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>B4R Shoes</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="icon" type="image/png" href="Images/B4R Final.png" />
+
+    <title>Shoes — B4R Shop</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img src="Images/B4R Final.png" alt="B4R Shop Logo" width="50" />
@@ -40,6 +38,9 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,12 +58,13 @@
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
                 Shop
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="shoes.html">Shoes</a></li>
-                <li><a class="dropdown-item" href="bag.html">Bags</a></li>
+                <li><a class="dropdown-item" href="bags.html">Bags</a></li>
                 <li><a class="dropdown-item" href="#">Jewelries</a></li>
                 <li><a class="dropdown-item" href="#">Belts</a></li>
                 <li><a class="dropdown-item" href="#">Female wears</a></li>
@@ -88,354 +90,273 @@
       </div>
     </nav>
 
-    <div class="greeting text-center">
-      <h1>Welcome to B4R Shoes Shop</h1>
-
-      <p>
-        You need good comfortable shoes at a very good price<a
-          class="clicktoseemore greeting"
-          href="#"
-          >Click to see more</a
-        >
-      </p>
+    <!-- Page Header -->
+    <div class="shoes-header text-center">
+      <h1>Shoes</h1>
+      <p>Good comfortable shoes at great prices</p>
     </div>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-3 col-sm-6 mb-4">
+
+    <!-- Product Grid -->
+    <div class="container mt-5 mb-5">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
           <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
+            <img
+              src="Images/ladyshoe1.png"
+              class="card-img-top"
+              alt="Stylish Lady Shoe"
+            />
             <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
+              <h5 class="card-title">Stylish Lady Shoe</h5>
               <p class="card-text">$49.99</p>
               <a
                 href="#"
                 class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
+                data-name="Stylish Lady Shoe"
+                data-price="$49.99"
                 data-image="Images/ladyshoe1.png"
                 >Buy Now</a
               >
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4">
+
+        <div class="col-md-3 col-sm-6">
           <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
+            <img
+              src="Images/sneaker.png"
+              class="card-img-top"
+              alt="Classic Sneaker"
+            />
             <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
+              <h5 class="card-title">Classic Sneaker</h5>
+              <p class="card-text">$59.99</p>
               <a
                 href="#"
                 class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
+                data-name="Classic Sneaker"
+                data-price="$59.99"
+                data-image="Images/sneaker.png"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card border-0 h-100 shoe-title shoeforlady">
+            <img
+              src="Images/heelsss.png"
+              class="card-img-top"
+              alt="Elegant Heels"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Elegant Heels</h5>
+              <p class="card-text">$69.99</p>
+              <a
+                href="#"
+                class="btn btn-outline-dark add-to-cart"
+                data-name="Elegant Heels"
+                data-price="$69.99"
+                data-image="Images/heelsss.png"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card border-0 h-100 shoe-title shoeforlady">
+            <img
+              src="Images/ladyshoe1.png"
+              class="card-img-top"
+              alt="Casual Flats"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Casual Flats</h5>
+              <p class="card-text">$39.99</p>
+              <a
+                href="#"
+                class="btn btn-outline-dark add-to-cart"
+                data-name="Casual Flats"
+                data-price="$39.99"
                 data-image="Images/ladyshoe1.png"
                 >Buy Now</a
               >
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4">
+
+        <div class="col-md-3 col-sm-6">
           <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
+            <img
+              src="Images/sneaker.png"
+              class="card-img-top"
+              alt="Running Sneaker"
+            />
             <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
+              <h5 class="card-title">Running Sneaker</h5>
+              <p class="card-text">$79.99</p>
               <a
                 href="#"
                 class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
+                data-name="Running Sneaker"
+                data-price="$79.99"
+                data-image="Images/sneaker.png"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card border-0 h-100 shoe-title shoeforlady">
+            <img
+              src="Images/heelsss.png"
+              class="card-img-top"
+              alt="Strappy Heels"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Strappy Heels</h5>
+              <p class="card-text">$74.99</p>
+              <a
+                href="#"
+                class="btn btn-outline-dark add-to-cart"
+                data-name="Strappy Heels"
+                data-price="$74.99"
+                data-image="Images/heelsss.png"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card border-0 h-100 shoe-title shoeforlady">
+            <img
+              src="Images/ladyshoe1.png"
+              class="card-img-top"
+              alt="Ankle Boots"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Ankle Boots</h5>
+              <p class="card-text">$89.99</p>
+              <a
+                href="#"
+                class="btn btn-outline-dark add-to-cart"
+                data-name="Ankle Boots"
+                data-price="$89.99"
                 data-image="Images/ladyshoe1.png"
                 >Buy Now</a
               >
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4">
+
+        <div class="col-md-3 col-sm-6">
           <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/sneaker.png" class="card-img-top" alt="Shoe 1" />
+            <img
+              src="Images/sneaker.png"
+              class="card-img-top"
+              alt="High Top Sneaker"
+            />
             <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
+              <h5 class="card-title">High Top Sneaker</h5>
+              <p class="card-text">$64.99</p>
               <a
                 href="#"
                 class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
+                data-name="High Top Sneaker"
+                data-price="$64.99"
+                data-image="Images/sneaker.png"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card border-0 h-100 shoe-title shoeforlady">
+            <img
+              src="Images/heelsss.png"
+              class="card-img-top"
+              alt="Block Heels"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Block Heels</h5>
+              <p class="card-text">$54.99</p>
+              <a
+                href="#"
+                class="btn btn-outline-dark add-to-cart"
+                data-name="Block Heels"
+                data-price="$54.99"
+                data-image="Images/heelsss.png"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card border-0 h-100 shoe-title shoeforlady">
+            <img
+              src="Images/ladyshoe1.png"
+              class="card-img-top"
+              alt="Slip On Shoes"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Slip On Shoes</h5>
+              <p class="card-text">$44.99</p>
+              <a
+                href="#"
+                class="btn btn-outline-dark add-to-cart"
+                data-name="Slip On Shoes"
+                data-price="$44.99"
                 data-image="Images/ladyshoe1.png"
                 >Buy Now</a
               >
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4">
+
+        <div class="col-md-3 col-sm-6">
           <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
+            <img
+              src="Images/sneaker.png"
+              class="card-img-top"
+              alt="Sport Sneaker"
+            />
             <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
+              <h5 class="card-title">Sport Sneaker</h5>
+              <p class="card-text">$84.99</p>
               <a
                 href="#"
                 class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
+                data-name="Sport Sneaker"
+                data-price="$84.99"
+                data-image="Images/sneaker.png"
                 >Buy Now</a
               >
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4">
+
+        <div class="col-md-3 col-sm-6">
           <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
+            <img
+              src="Images/heelsss.png"
+              class="card-img-top"
+              alt="Platform Heels"
+            />
             <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
+              <h5 class="card-title">Platform Heels</h5>
+              <p class="card-text">$94.99</p>
               <a
                 href="#"
                 class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/heelsss.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
-                >Buy Now</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="card border-0 h-100 shoe-title shoeforlady">
-            <img src="Images/ladyshoe1.png" class="card-img-top" alt="Shoe 1" />
-            <div class="card-body text-center">
-              <h5 class="card-title">Stylish Shoe</h5>
-              <p class="card-text">$49.99</p>
-              <a
-                href="#"
-                class="btn btn-outline-dark add-to-cart"
-                data-name="Leather shoe"
-                data-price="N1200"
-                data-image="Images/ladyshoe1.png"
+                data-name="Platform Heels"
+                data-price="$94.99"
+                data-image="Images/heelsss.png"
                 >Buy Now</a
               >
             </div>
@@ -443,6 +364,66 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <img
+              src="Images/B4R Final.png"
+              alt="B4R Shop"
+              width="45"
+              class="footer-logo"
+            />
+            <p class="footer-about">
+              B4R Shopping Mall — your one-stop destination for fashion, tech,
+              groceries and more.
+            </p>
+          </div>
+
+          <div class="col-6 col-md-2">
+            <h6 class="footer-heading">Shop</h6>
+            <a href="shoes.html" class="footer-link">Shoes</a>
+            <a href="bags.html" class="footer-link">Bags</a>
+            <a href="#" class="footer-link">Electronics</a>
+            <a href="#" class="footer-link">Cosmetics</a>
+          </div>
+
+          <div class="col-6 col-md-2">
+            <h6 class="footer-heading">Info</h6>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">FAQs</a>
+            <a href="#" class="footer-link">Returns Policy</a>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <h6 class="footer-heading">Stay in the loop</h6>
+            <p class="footer-newsletter-text">
+              Get the latest deals straight to your inbox.
+            </p>
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control footer-input"
+                placeholder="your@email.com"
+              />
+              <button class="footer-subscribe-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="footer-bottom">© 2026 B4R Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
     <script src="src/index.js"></script>
   </body>
 </html>
