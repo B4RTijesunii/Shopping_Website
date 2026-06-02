@@ -1,24 +1,71 @@
+/* =============================================
+   B4R SHOP — styles.css
+   ============================================= */
+
+/* ── Typography ────────────────────────────── */
+body,
 body p {
   font-family: "Poppins", sans-serif;
 }
-body {
-  font-family: "Poppins", sans-serif;
-}
-.navigation img {
-  width: 70px;
-  background-color: black;
-}
-.navigation {
+
+/* ── Navbar ────────────────────────────────── */
+/* Removed .navigation — not used, Bootstrap's .navbar handles this */
+
+.navbar-nav {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 10%;
+  margin: 0;
 }
+
+.navbar-nav li {
+  list-style: none;
+  justify-content: end;
+}
+
+/* Scoped nav link styles — no longer affects every <a> on the page */
+.nav-link {
+  text-decoration: none;
+  padding: 15px;
+}
+
+.nav-link:hover {
+  color: #d3a062 !important;
+}
+.navbar {
+  padding: 12px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+  width: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.shop-dropdown {
+  padding-top: 15px;
+}
+
+.shoppp {
+  margin-bottom: -10px;
+}
+
+.dropdown {
+  margin-top: -8px;
+}
+
+/* ── Hero ──────────────────────────────────── */
 .hero {
-  height: 90vh;
+  height: 100vh;
+  min-height: 500px;
   width: 100%;
-  position: relative;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(/Images/shopping\ mall2.jpg);
+  background-image:
+    linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/Images/shopping-mall2.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -27,95 +74,80 @@ body {
   text-align: center;
   justify-content: center;
 }
+
 .text-box {
   color: white;
-  max-width: 600px;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
 }
+
 .text-box h1 {
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
-  text-align: center;
-  max-width: 600px;
-}
-ul {
-  display: flex;
-  margin: 0;
-}
-a {
-  color: black;
-  text-decoration: none;
-  padding: 15px;
-  justify-content: right;
-  border: black;
-}
-.shop-dropdown {
-  padding-top: 15px;
-}
-.clicktoseemore {
-  color: black;
-}
-.clicktoseemore {
-  color: black;
-}
-a:hover {
-  color: #d3a062;
-}
-a:active {
-  color: red;
-}
-.nav-link:hover {
-  color: #d3a062;
-}
 .homepage-p {
-  color: burlywood;
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
 }
-li {
-  list-style: none;
-  justify-content: end;
-}
+
 .homepage-button {
   background-color: #2a9d8f;
   color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
+  padding: 14px 36px;
+  border-radius: 50px;
   border: none;
-  align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
-.shoppp {
-  margin-bottom: -10px;
-}
+
 .homepage-button:hover {
   background-color: #21867d;
+  color: white;
+  transform: translateY(-2px);
 }
-.dropdown {
-  margin-top: -8px;
-}
-.catalogue {
-  display: flex;
-}
+
+/* ── Shoes / Product Cards ─────────────────── */
 .shoe-title {
   background-color: #ebe6e0;
 }
-.shoeforlady {
+
+.catalogue {
+  display: flex;
 }
+
 .shoeforlady:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .card-img-top {
-  height: 250px; /* you can adjust this to 200px, 300px depending on your design */
+  height: 250px;
   object-fit: cover;
   width: 100%;
-  border-radius: 10px; /* optional, to make it look softer */
+  border-radius: 10px;
 }
-/* Make the inputs look cleaner */
+
+/* ── Forms (Cart / Checkout) ───────────────── */
 .form-control {
   border-radius: 10px;
   padding: 12px;
@@ -123,23 +155,73 @@ li {
   transition: all 0.3s ease;
 }
 
-/* Add a nice glow when you click an input */
 .form-control:focus {
   border-color: #0d6efd;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
 }
 
-/* Style the big 'Complete Purchase' button */
+/* ── Buttons ───────────────────────────────── */
 .btn-primary {
   padding: 15px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 10px;
-  background-color: #000; /* Let's make it sleek black */
+  background-color: #000;
   border: none;
 }
 
 .btn-primary:hover {
   background-color: #333;
+}
+
+/* CATEGORIES SECTION */
+.categories-section {
+  padding: 60px 0;
+  background: #f8f8f6;
+}
+.categories-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+  letter-spacing: 0.02em;
+}
+.category-card {
+  display: block;
+  text-decoration: none;
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  height: 100%; /* add this */
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-card-inner {
+  padding: 24px 16px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.category-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0; /* was 0.03em */
 }
