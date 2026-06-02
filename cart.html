@@ -1,56 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Fonts: preconnect first -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="icon" type="image/png" href="Images/B4R Final.png" />
+
+    <title>Cart — B4R Shop</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="Images/B4R Final.png" alt="B4R Shop Logo" width="50" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown shoppp">
+              <a
+                class="nav-link dropdown-toggle shop-dropdown"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shop
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="shoes.html">Shoes</a></li>
+                <li><a class="dropdown-item" href="bags.html">Bags</a></li>
+                <li><a class="dropdown-item" href="#">Jewelries</a></li>
+                <li><a class="dropdown-item" href="#">Belts</a></li>
+                <li><a class="dropdown-item" href="#">Female wears</a></li>
+                <li><a class="dropdown-item" href="#">Male wears</a></li>
+                <li><a class="dropdown-item" href="#">Books</a></li>
+                <li><a class="dropdown-item" href="#">Household items</a></li>
+                <li><a class="dropdown-item" href="#">Groceries</a></li>
+                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Cosmetics</a></li>
+                <li><a class="dropdown-item" href="#">Foodstuffs</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="cart.html">Cart</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header text-center">
+      <h1>Your Shopping Bag</h1>
+      <p>Review your items before checkout</p>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="container cart-container">
+      <div class="row g-4">
+        <!-- Cart Items -->
+        <div class="col-12 col-lg-8">
+          <div id="cart-items-list">
+            <!-- JS will populate this -->
+          </div>
+
+          <!-- Empty state shown when cart is empty -->
+          <div class="cart-empty" id="cart-empty-state">
+            <div class="cart-empty-icon">🛒</div>
+            <h4>Your bag is empty</h4>
+            <p>Looks like you haven't added anything yet.</p>
+            <a href="index.html" class="homepage-button">Start Shopping</a>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-12 col-lg-4">
+          <div class="cart-summary">
+            <h5 class="cart-summary-title">Order Summary</h5>
+
+            <div class="cart-summary-row">
+              <span>Subtotal</span>
+              <span id="cart-total-price">$0.00</span>
+            </div>
+
+            <div class="cart-summary-row">
+              <span>Delivery</span>
+              <span class="cart-delivery">Free</span>
+            </div>
+
+            <hr class="cart-summary-divider" />
+
+            <div class="cart-summary-row cart-summary-total">
+              <span>Total</span>
+              <span id="cart-grand-total">$0.00</span>
+            </div>
+
+            <a href="checkout.html" class="cart-checkout-btn"
+              >Proceed to Checkout</a
+            >
+
+            <button class="cart-empty-btn" onclick="emptyMyBag()">
+              Empty Bag
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <img
+              src="Images/B4R Final.png"
+              alt="B4R Shop"
+              width="45"
+              class="footer-logo"
+            />
+            <p class="footer-about">
+              B4R Shopping Mall — your one-stop destination for fashion, tech,
+              groceries and more.
+            </p>
+          </div>
+
+          <div class="col-6 col-md-2">
+            <h6 class="footer-heading">Shop</h6>
+            <a href="shoes.html" class="footer-link">Shoes</a>
+            <a href="bags.html" class="footer-link">Bags</a>
+            <a href="#" class="footer-link">Electronics</a>
+            <a href="#" class="footer-link">Cosmetics</a>
+          </div>
+
+          <div class="col-6 col-md-2">
+            <h6 class="footer-heading">Info</h6>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">FAQs</a>
+            <a href="#" class="footer-link">Returns Policy</a>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <h6 class="footer-heading">Stay in the loop</h6>
+            <p class="footer-newsletter-text">
+              Get the latest deals straight to your inbox.
+            </p>
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control footer-input"
+                placeholder="your@email.com"
+              />
+              <button class="footer-subscribe-btn">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="footer-bottom">© 2026 B4R Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lora&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="src/styles.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>B4R Shop|Cart</title>
-  </head>
-  <body>
-    <div class="container mt-5">
-      <h1>Your Shopping Bag</h1>
-
-      <div id="cart-items-list"></div>
-
-      <h3>Total: <span id="cart-total-price">N0</span></h3>
-
-      <button class="btn btn-danger" onclick="emptyMyBag()">Empty Bag</button>
-      <a href="checkout.html" class="btn btn-success btn-lg w-100 mb-2"
-        >Proceed to Checkout</a
-      >
-    </div>
-
     <script src="src/cart.js"></script>
   </body>
 </html>
