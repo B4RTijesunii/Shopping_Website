@@ -16,7 +16,7 @@ function loadCheckout() {
     cost += parseInt(shoe.price.replace(/[^\d]/g, "")) || 0;
   });
 
-  totalSpot.innerText = "N" + cost;
+  totalSpot.innerText = "$" + cost;
 }
 
 // Handle the "Purchase" button
