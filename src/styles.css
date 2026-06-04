@@ -489,3 +489,17 @@ body p {
   margin-bottom: 20px;
   color: #1a1a1a;
 }
+/* ── Back Button ───────────────────────────── */
+.back-btn {
+  display: inline-block;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+  color: #2a9d8f;
+}
